@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.03"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Complaint Title"
+                android:ems="10" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Complaint Details"
+                android:inputType="text"
+                android:ems="10" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Click to add Location"
+                android:editable="false"
+                android:ems="10" />
+
+            <ImageView
+                android:id="@+id/imgView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </ImageView>
+
+            <Button
+                android:id="@+id/buttonLoadPicture"
+                android:layout_width="217dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:onClick="loadImagefromGallery"
+                android:text="Load Picture" >
+            </Button>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Enter Risk Level"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/textView" />
+
+            <Spinner
+                android:id="@+id/osversions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" />
+            <TextView
+                android:id="@+id/selVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/osversions"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <Button
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:onClick="uploadImage"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+
+        android:shadowColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="10dp"
+        android:text="POST COMPLAINT" />
+
+</LinearLayout>
